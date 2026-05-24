@@ -22,6 +22,43 @@ Before running the server, you need to create the database and its schema.
 3. Connect to the `sciqus_db` database.
 4. Execute the SQL script provided in `schema.sql` to create all required tables and stored procedures.
 
+## Database Schema
+
+### courses
+| Column | Type | Constraints |
+|--------|------|-------------|
+| course_id | SERIAL | PRIMARY KEY |
+| course_name | VARCHAR(255) | NOT NULL |
+| course_code | VARCHAR(50) | UNIQUE, NOT NULL |
+| course_duration | INTEGER | NOT NULL |
+| duration_unit | VARCHAR(10) | DEFAULT 'months' |
+
+### students
+| Column | Type | Constraints |
+|--------|------|-------------|
+| student_id | SERIAL | PRIMARY KEY |
+| first_name | VARCHAR(100) | NOT NULL |
+| last_name | VARCHAR(100) | NOT NULL |
+| email | VARCHAR(255) | UNIQUE, NOT NULL |
+| phone | VARCHAR(20) | |
+| course_id | INTEGER | FK → courses |
+| status | VARCHAR(20) | active/inactive/graduated |
+| enrollment_date | DATE | DEFAULT today |
+
+### users
+| Column | Type | Constraints |
+|--------|------|-------------|
+| user_id | SERIAL | PRIMARY KEY |
+| username | VARCHAR(100) | UNIQUE, NOT NULL |
+| email | VARCHAR(255) | UNIQUE, NOT NULL |
+| password_hash | VARCHAR(255) | NOT NULL |
+| role | VARCHAR(20) | admin/student |
+
+## Stored Procedures
+- `add_student` — inserts student after validating course exists
+- `update_student` — updates student fields and course assignment
+- `delete_student` — deletes student, restricts if course assigned unless force=true
+
 ### 2. Environment Variables
 
 Create a `.env` file in the root of the `sciqus-backend` directory (you can copy the provided `.env.example`). Adjust the `DATABASE_URL` with your actual PostgreSQL password if needed:
