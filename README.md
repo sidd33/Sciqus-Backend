@@ -106,42 +106,42 @@ All endpoints have been tested successfully. The test results are showcased belo
 
 ### Authentication
 1. **POST /api/auth/register (201 Created)**  
-   ![POST /api/auth/register](preview/1.png)
+   ![POST /api/auth/register](preview/Screenshot%202026-05-24%20170713.png)
 
 2. **POST /api/auth/login (200 OK + JWT token)**  
-   ![POST /api/auth/login](preview/2.png)
+   ![POST /api/auth/login](preview/Screenshot%202026-05-24%20170806.png)
 
 ### Courses
 3. **GET /api/courses (200 OK + all 5 courses)**  
-   ![GET /api/courses](preview/3.png)
+   ![GET /api/courses](preview/Screenshot%202026-05-24%20170923.png)
 
 4. **GET /api/courses/1 (200 OK + single course)**  
-   ![GET /api/courses/1](preview/4.png)
+   ![GET /api/courses/1](preview/Screenshot%202026-05-24%20170951.png)
 
 5. **POST /api/courses (201 Created)**  
-   ![POST /api/courses](preview/5.png)
+   ![POST /api/courses](preview/Screenshot%202026-05-24%20171121.png)
 
 6. **PUT /api/courses/1 (200 OK + updated)**  
-   ![PUT /api/courses/1](preview/6.png)
+   ![PUT /api/courses/1](preview/Screenshot%202026-05-24%20171250.png)
 
 7. **DELETE /api/courses/6 (200 OK + deleted)**  
-   ![DELETE /api/courses/6](preview/7.png)
+   ![DELETE /api/courses/6](preview/Screenshot%202026-05-24%20171356.png)
 
 ### Students
 8. **POST /api/students (201 Created)**  
-   ![POST /api/students](preview/8.png)
+   ![POST /api/students](preview/Screenshot%202026-05-24%20171503.png)
 
 9. **GET /api/students (200 OK + student with course info)**  
-   ![GET /api/students](preview/9.png)
+   ![GET /api/students](preview/Screenshot%202026-05-24%20171541.png)
 
 10. **GET /api/students/2 (200 OK + single student)**  
-   ![GET /api/students/2](preview/10.png)
+   ![GET /api/students/2](preview/Screenshot%202026-05-24%20171621.png)
 
 11. **PUT /api/students/2 (200 OK + updated)**  
-   ![PUT /api/students/2](preview/11.png)
+   ![PUT /api/students/2](preview/Screenshot%202026-05-24%20171705.png)
 
 12. **GET /api/courses/1/students (200 OK + enrolled students)**  
-   ![GET /api/courses/1/students](preview/12.png)
+   ![GET /api/courses/1/students](preview/Screenshot%202026-05-24%20171810.png)
 
 13. **DELETE /api/students/2?force (200 OK + deleted)**  
-   ![DELETE /api/students/2?force](preview/13.png)
+   ![DELETE /api/students/2?force](preview/Screenshot%202026-05-24%20171910.png)
